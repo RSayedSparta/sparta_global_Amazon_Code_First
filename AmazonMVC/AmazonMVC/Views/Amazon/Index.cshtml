@@ -1,0 +1,32 @@
+﻿@using AmazonMVC.Models
+@model AmazonMVC.Models.Products
+
+@{
+    ViewBag.Title = "Index";
+    List<Products> prod = ViewBag.Products;
+    //string[,] p = ViewBag.Products;
+}
+
+<h2>Products</h2>
+
+<ul class="items">
+    @foreach (var item in prod)
+    {
+        <br />  
+        <li><a href="@item.PLink" target="_blank">@item.PName</a></li>
+        <li>Product Description: @item.PDescription </li>
+        <li>Product Price: @item.PPrice</li>
+        <br />
+    }
+
+    @*<a href=""><li>Product Name: @Model.PName</li></a>
+    <li>Product Description: @Model.PDescription </li>
+    <li>Product Price: @Model.PPrice</li>*@
+
+    @*@for (int i = 0; i < 3; i++)
+        {
+            <li>@p[0, i]</li>
+        }*@
+
+
+</ul>
