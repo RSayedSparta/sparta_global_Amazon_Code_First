@@ -16,7 +16,7 @@ namespace AmazonMVC
             }
         }
 
-        public string doorName
+        public string doorNumber
         {
             get => default(string);
             set
@@ -40,7 +40,7 @@ namespace AmazonMVC
             }
         }
 
-        public string postCode
+        public string postcode
         {
             get => default(string);
             set

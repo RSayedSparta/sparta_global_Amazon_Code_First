@@ -24,7 +24,7 @@ namespace AmazonMVC
             }
         }
 
-        public string lastName
+        public string lastNmae
         {
             get => default(string);
             set

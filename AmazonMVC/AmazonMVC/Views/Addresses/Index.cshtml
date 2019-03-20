@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AmazonMVC.Address>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.doorNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.roadName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.city)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.postcode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.doorNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.roadName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.city)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.postcode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.addressID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.addressID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.addressID })
+        </td>
+    </tr>
+}
+
+</table>
